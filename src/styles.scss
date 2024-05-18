@@ -1,0 +1,44 @@
+@use "./scss/reset.scss" as *;
+@use "./scss/keyframes.scss" as *;
+
+:root {
+  font-size: 14px;
+
+  @media screen and (min-width: 800px) {
+    font-size: 18px;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+}
+
+body {
+  background-color: #f0f0f0;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+button,
+input {
+  background-color: initial;
+  border: initial;
+  outline: initial;
+}
+
+a {
+  cursor: pointer;
+  font-style: initial;
+  text-decoration: none;
+  color: initial;
+  border: initial;
+
+  &:visited {
+    color: initial;
+  }
+}

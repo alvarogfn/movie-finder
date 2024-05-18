@@ -1,0 +1,12 @@
+<div class="modal">
+  <router-outlet></router-outlet>
+</div>
+<section class="cards">
+  <app-card class="cards__card">
+    <app-title></app-title>
+  </app-card>
+  <app-card class="cards__card">
+    <app-input (output)="search($event)"></app-input>
+  </app-card>
+  <app-list [data]="movies!.Search" *ngIf="movies"></app-list>
+</section>

@@ -1,0 +1,84 @@
+.movie {
+  border-radius: 5px;
+
+  border: 1px solid rgba($color: #000000, $alpha: 0.025);
+
+  transition: 200ms;
+  height: 100%;
+
+  opacity: 0;
+  animation: appear_from_bottom 200ms linear forwards;
+
+  &:hover,
+  &:active {
+    background-color: rgba($color: #000000, $alpha: 0.1);
+    scale: 1.05;
+  }
+
+  &__card {
+    height: 100%;
+  }
+
+  &__link {
+    width: 100%;
+    height: 100%;
+
+    padding: 10px;
+
+    display: flex;
+    flex-flow: column nowrap;
+
+    max-height: 400px;
+
+    row-gap: 5px;
+  }
+
+  &__title {
+    font-weight: 900;
+    font-size: 1rem;
+    color: rgba($color: #000000, $alpha: 0.85);
+  }
+
+  &__type,
+  &__year {
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 0.75rem;
+
+    &::before {
+      font-weight: 300;
+    }
+  }
+
+  &__type {
+    &::before {
+      content: "type: ";
+    }
+  }
+
+  &__year {
+    &::before {
+      content: "year: ";
+    }
+  }
+
+  &__poster {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 5px;
+  }
+}
+
+@keyframes appear_from_bottom {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}

@@ -1,0 +1,14 @@
+<form (ngSubmit)="onSubmit($event)">
+  <input
+    type="text"
+    title="Search for the Movie Here"
+    name="name"
+    id="name"
+    [(ngModel)]="input"
+    [required]="true"
+    placeholder="Search for the movie here"
+  />
+  <button>
+    <img src="../../../../../assets/search.svg" alt="search" />
+  </button>
+</form>

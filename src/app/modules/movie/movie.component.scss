@@ -1,0 +1,21 @@
+.modal {
+  position: fixed;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+
+  z-index: 2;
+}
+
+.cards {
+  display: flex;
+  flex-flow: column nowrap;
+  row-gap: 20px;
+
+  &__card {
+    max-width: 500px;
+    margin: 0 auto;
+    min-width: 300px;
+    width: 100%;
+  }
+}

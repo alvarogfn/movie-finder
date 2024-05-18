@@ -1,0 +1,48 @@
+<section class="modal">
+  <app-card class="modal__card" *ngIf="movie">
+    <div class="modal__content">
+      <div class="modal__about">
+        <h1 class="modal__title">{{ movie?.Title }}</h1>
+        <p class="modal__plot">{{ movie?.Plot }}</p>
+        <p class="modal__item">
+          <span class="modal__item-label">Genre:</span> {{ movie?.Genre }}
+        </p>
+        <p class="modal__item">
+          <span class="modal__item-label">Writer:</span> {{ movie?.Writer }}
+        </p>
+        <p class="modal__item">
+          <span class="modal__item-label">Year:</span> {{ movie?.Year }}
+        </p>
+        <p class="modal__item">
+          <span class="modal__item-label">Rated:</span> {{ movie?.Rated }}
+        </p>
+        <p class="modal__item">
+          <span class="modal__item-label">Released:</span> {{ movie?.Released }}
+        </p>
+        <p class="modal__item">
+          <span class="modal__item-label">Runtime:</span> {{ movie?.Runtime }}
+        </p>
+        <p class="modal__item">
+          <span class="modal__item-label">Director:</span> {{ movie?.Director }}
+        </p>
+        <p class="modal__item">
+          <span class="modal__item-label">Actors:</span> {{ movie?.Actors }}
+        </p>
+        <p class="modal__item">
+          <span class="modal__item-label">Language:</span> {{ movie?.Language }}
+        </p>
+        <p class="modal__item">
+          <span class="modal__item-label">Country:</span> {{ movie?.Country }}
+        </p>
+        <p class="modal__item">
+          <span class="modal__item-label">Awards:</span> {{ movie?.Awards }}
+        </p>
+        <p class="modal__item">
+          <span class="modal__item-label">Type:</span> {{ movie?.Type }}
+        </p>
+      </div>
+      <img class="modal__poster" [src]="movie?.Poster" [alt]="movie?.Title" />
+    </div>
+    <button class="modal__close" (click)="closeModal()">X</button>
+  </app-card>
+</section>

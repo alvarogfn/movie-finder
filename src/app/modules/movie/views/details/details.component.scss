@@ -1,0 +1,114 @@
+.modal {
+  width: 100vw;
+  height: 100vh;
+
+  max-width: 100%;
+  max-height: 100%;
+
+  background-color: rgba($color: #000000, $alpha: 0.2);
+
+  display: flex;
+
+  &__card {
+    margin: 30px auto;
+    width: 90vw;
+    min-width: 300px;
+
+    overflow: auto;
+
+    position: relative;
+
+    animation: pull 200ms ease-in-out forwards;
+  }
+
+  &__close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+
+    cursor: pointer;
+
+    text-indent: -20000px;
+
+    font-weight: bold;
+
+    background-image: url("../../../../../assets/close.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    width: 20px;
+
+    height: 20px;
+  }
+
+  &__content {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding: 30px;
+
+    row-gap: 10px;
+    column-gap: 20px;
+  }
+
+  &__poster {
+    flex-grow: 3;
+    flex-basis: 200px;
+
+    width: 100%;
+
+    max-width: 300px;
+
+    max-height: 100%;
+
+    border-radius: 5px;
+
+    margin: 0 auto;
+
+    object-fit: cover;
+  }
+
+  &__about {
+    flex-grow: 1;
+
+    flex-basis: 200px;
+
+    display: flex;
+    flex-flow: column nowrap;
+    row-gap: 7.5px;
+  }
+
+  &__title {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  &__plot {
+    text-align: justify;
+
+    margin: 5px 0 10px;
+
+    line-height: 20px;
+  }
+
+  &__item {
+    font-weight: 500;
+  }
+
+  &__item-label {
+    font-weight: 300;
+  }
+}
+
+@keyframes pull {
+  from {
+    opacity: 0;
+    scale: (0.1);
+  }
+  to {
+    opacity: 1;
+    scale: (1);
+  }
+}

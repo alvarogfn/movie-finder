@@ -1,0 +1,14 @@
+<li class="movie" [style.animationDelay]="delay + 'ms'">
+  <app-card class="movie__card">
+    <a class="movie__link" [routerLink]="['movie', movie!.imdbID]">
+      <h1 class="movie__title">{{ movie!.Title }}</h1>
+      <p class="movie__type">
+        {{ movie!.Type }}
+      </p>
+      <p class="movie__year">
+        {{ movie!.Year }}
+      </p>
+      <img class="movie__poster" [src]="movie!.Poster" [alt]="movie!.Title" />
+    </a>
+  </app-card>
+</li>

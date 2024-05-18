@@ -1,0 +1,47 @@
+@use "../../../../../scss/mixins.scss" as *;
+
+form {
+  padding: 10px 5px;
+  display: flex;
+  flex-flow: row wrap;
+
+  gap: 5px;
+
+  margin: 5px;
+}
+
+input {
+  padding: 10px;
+
+  flex-grow: 1;
+  display: block;
+
+  border-radius: 5px;
+
+  font-size: 0.9rem;
+
+  @include input-color;
+
+  font-weight: 500;
+
+  &::placeholder {
+    font-weight: 300;
+  }
+}
+
+img {
+  width: 40px;
+  height: 40px;
+}
+
+button {
+  cursor: pointer;
+
+  border-radius: 5px;
+
+  flex-basis: 40px;
+  width: 40px;
+  height: 40px;
+
+  @include input-color;
+}
